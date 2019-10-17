@@ -156,7 +156,8 @@ end
         S_ref  = S /  T;
         ST  = Reg_OT(Cost, S_ref, Cos_reg) ;
 
-    %% udpate U and coefficients, Bdel represents the solution $ U = V^KV{^K^\top}$, Cost represents  the transportation cost matrix $\mathcal{D}$
+    %% udpate U and coefficients, Bdel represents the solution $ U = V^KV{^K^\top}$, 
+       %Cost represents  the transportation cost matrix $\mathcal{D}$
         WG = constructBiGraph((ST)) ;
         LW = CalLaplacian(WG);    
         [V, Di] = eig(LW);
@@ -211,7 +212,8 @@ W = L * S;
 
 
 
-%%   Calculating AUC loss : Here we adopt an efficient AUC evaluation method from one of our earlier work, see: .  
+%%   Calculating AUC loss : Here we adopt an efficient AUC evaluation method from one of our earlier work, 
+      %    see: 'https://aaai.org/ojs/index.php/AAAI/article/view/4510'  
 
     function res = calXTLX(A, B)
       np  = sum(B == 1) ;
